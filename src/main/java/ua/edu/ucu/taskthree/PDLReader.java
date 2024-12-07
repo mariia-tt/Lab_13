@@ -15,23 +15,24 @@ public class PDLReader {
     public Company fetch(String companyName) {
         URL url = new URL(
             "https://api.peopledatalabs.com/v5/company/enrich?website="
-             + companyName);
+            + companyName);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
         connection.setRequestProperty("X-Api-Key", API_KEY);
-
+    
         int responseCode = connection.getResponseCode();
         if (responseCode != HTTP_OK) {
             System.out.println("Error: " + responseCode);
             return null;
         }
-
+    
         String response = new Scanner(
             connection.getInputStream()).useDelimiter("\\Z").next();
         System.out.println("Response from PDL: " + response);
-
+    
         JSONObject json = new JSONObject(response);
         Company company = new Company();
         company.setName(json.optString("name", "Unknown"));
+        return company;
     }
 }
