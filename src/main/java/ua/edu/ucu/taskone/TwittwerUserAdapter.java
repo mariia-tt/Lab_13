@@ -3,7 +3,7 @@ package ua.edu.ucu.taskone;
 public class TwittwerUserAdapter implements User {
     private Twitteruser twitteruser;
 
-    public TwittwerUserAdapter(Twitteruser twitteruser){
+    public TwittwerUserAdapter(Twitteruser twitteruser) {
         this.twitteruser = twitteruser;
     }
 

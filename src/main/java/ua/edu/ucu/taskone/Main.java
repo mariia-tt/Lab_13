@@ -24,6 +24,7 @@ public class Main {
                     "USA",
                     LocalDateTime.now().minusDays(1).toString());
                 user = new TwittwerUserAdapter(twitteruser);
+                break;
         
             default:
                 break;

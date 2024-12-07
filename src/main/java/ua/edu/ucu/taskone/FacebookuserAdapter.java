@@ -4,7 +4,7 @@ public class FacebookuserAdapter implements User {
 
     private FacebookUser facebookUser;
 
-    public FacebookuserAdapter(FacebookUser facebookUser){
+    public FacebookuserAdapter(FacebookUser facebookUser) {
         this.facebookUser = facebookUser;
     }
 
